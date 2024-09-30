@@ -8,12 +8,12 @@ import org.mapstruct.factory.Mappers;
 
 import java.util.List;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface RoleMapper {
 
     RoleMapper roleMapper = Mappers.getMapper(RoleMapper.class);
-    RoleDto roleToRoleDto(Role user);
-    Role roleDtoToRole(RoleDto userDto);
-    List<RoleDto> roleToRoleDto(List<Role> user);
-    List<Role> roleDtoToRole(List<RoleDto> userDto);
+    RoleDto roleToRoleDto(Role role);
+    Role roleDtoToRole(RoleDto roleDto);
+    List<RoleDto> roleToRoleDto(List<Role> roles);
+    List<Role> roleDtoToRole(List<RoleDto> roleDtos);
 }
